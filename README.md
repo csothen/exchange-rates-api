@@ -36,3 +36,9 @@ GET : /api/rates?from={currencyCode}&to={currencyCode}
 ```
 GET : /api/rates/chart?from={currencyCode}&to={currencyCode}
 ```
+
+## Next Steps ##
+
+- Split the two groups "rates" and "currencies" into different applications
+- Introduce the concept of message brokers for the communication between applications
+- Improve code performance
