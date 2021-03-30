@@ -9,7 +9,7 @@
 
 ### Starting the API Server ###
 
-To start the API Server in your machine you can run `docker-compose up`, this will start the application and expose it in your port 9091.
+To start the API Server in your machine you can run `docker-compose up`, this will start the application and expose it in your port `9091`.
 
 ### Features ###
 
