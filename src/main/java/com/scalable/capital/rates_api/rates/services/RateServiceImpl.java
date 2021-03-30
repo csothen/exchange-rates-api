@@ -14,6 +14,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class RateServiceImpl implements IRateService {
 
+    private static final String EUR_CURRENCY = "EUR";
+
     @Autowired
     private IRateRepository repository;
 
@@ -23,7 +25,10 @@ public class RateServiceImpl implements IRateService {
     @Value("${rates.chart.url}")
     public String chartUrl;
 
-    private static final String EUR_CURRENCY = "EUR";
+    public RateServiceImpl(ICurrencyService currencyService, IRateRepository repository) {
+        this.currencyService = currencyService;
+        this.repository = repository;
+    }
 
     @Override
     public Rate getRateForCurrencyPair(String from, String to) {

@@ -1,6 +1,5 @@
 package com.scalable.capital.rates_api.currencies.services;
 
-import java.text.DecimalFormat;
 import java.util.List;
 
 import com.scalable.capital.rates_api.currencies.data.ICurrencyRepository;
@@ -20,6 +19,11 @@ public class CurrencyServiceImpl implements ICurrencyService {
 
     @Autowired
     private IRateService rateService;
+
+    public CurrencyServiceImpl(IRateService rateService, ICurrencyRepository repository) {
+        this.rateService = rateService;
+        this.repository = repository;
+    }
 
     @Override
     public List<Currency> listAll() {
